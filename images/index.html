@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name  ="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VitaCare Online Pharmacy-Trusted digital dispensary  for authentic medications, wellness supplements, medical devices, and 24/7 pharmacist care.">
+    <meta name="keywords" content="Online Pharmacy, Medications,Supplements, Medical devices,Healthcare,VitaCare">
+    <title>Home | VitaCare Online Pharmacy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!---utility bar--->
+    <div class ="top-bar">
+        <div class="container top-bar-inner">
+            <span>Lisenced Digital Pharmacy &bull; Free  Deliver on orders over $50</span>
+            <span id="LiveClock" class="Live-clock" aria-live="polite">Loading time....</span>
+
+        </div>
+    </div>
+
+    <!--Navigation header-->
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="brand" aria-label="VitaCare Home">
+                <img src="images/logo.svg" alt="VitaCare Online Pharmacy Logo">
+                <a/>
+                
+                <nav class="nav-links" id="navLinks" arial-label="Primary Navigation">
+                   <a href="index.html" class="active">Home</a>
+                   <a href="about.html">About Us</a>
+                   <a href="products.html">Products</a>
+                   <a href="services.html">Services</a>
+                   <a href="contact.html">Contact Us</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle color theme">🌙 Dark</button>
+                    <button class="icon-btn" type="button" onclick="toggleCartDrawe(true)"  arial-label="Open shopping Cart">
+                        🛒 Cart <span class="cart-badge">0</span>
+                 
+
+                    </button>
+                    <button id="mobileToggle" class="mobile-toggle" type="button" arial-label="Open Menu">☰</button>
+
+                </div>
+
+                    
+            </div>
+                   
+                
+    </header>
+    <main>
+        <!--hero banner-->
+        <section class="hero">
+            <div class="container hero-grid">
+
+            </div>
+            <span class="hero-badge">✚ CERTIFIED DIGITAL HEALTHCARE</span>
+            <h1>Your Trusted<span>Online Pharmacy</span>&amp; Wellness Partner</h1>
+            <p>Welcome to VitaCare Online Pharmacy.Order genuine  prescription  medications, daily vitamins,first-aid essentials, and home diagnosis devices with rapid temperature-controlled delivery</p>
+            <div class="hero-cta">
+                <a href="products.html" class="btn btn-primary">Explore Medication &rarr; </a>
+                <a  href="services.html" class="vtn btn-outline">Our Healthacre Services</a>
+
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <strong>100%</strong>
+                    <span>Authentic Batch-Veerified</span>
+            </div>
+
+             <div class="stat-item">
+              <strong>24/7</strong>
+              <span>Pharmacist Support</span>
+            </div>
+
+                </div>
+                <div class="stats-item">
+                    <strong>2 Hours</strong>
+                    <span>Express Delivery</span>
+
+                </div>
+            </div>
+        </div>
+        <div class="hero-media">
+            <img src="images/hero-bammer.svg" alt="VitaCare Digital Pharmacy Illustration">
+            </div>
+        </div>
+        </section>
+
+        <!--Offers and countdown-->
+        <section class="containers">
+            <div class="promo-banner">
+                 </div>
+                    <spam class="promo-tag">FLASH WELLNESS OFFER</spam>
+                    <h2>Save 20%on  Immunity &amp; Home Diagnotics</h2>
+                    <p>Use code<strong>VITACARE20</strong>at checkout or enjoy automatic free shipping above $50.</p>
+                </div>
+                <div class="countdown-boxes" aria-label="Offer Countdown Timer">
+                    <div class="time-box"><span id="cdDays">03</span><small>Days</small></div>
+                    <div class="time-box"><span id="cdHours">14</span><small>Hours</small></div>
+                    <div class="time-box"><span id="cdMins">00</span><small>Mins</small></div>
+                    <div class="time-box"><span id="cdSecs">00</span><small>Secs</small></div>
+
+                </div>
+                <a href="products.html" class="btn btn-Primary">Claim Offer Now</a>
+            </div>
+        </section>
+
+        <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Pharmacy Essentials</h2>
+          <p>Clinically trusted bestsellers ready for immediate doorstep dispatch.</p>
+        </div>
+        <div class="products-grid" id="featuredProductsGrid"></div>
+        <div class="center-cta">
+          <a href="products.html" class="btn btn-outline">View All 12+ Pharmacy Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose VitaCare -->
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Patients Trust VitaCare</h2>
+          <p>Combining strict pharmaceutical safety standards with modern e-commerce convenience.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-icon">🛡️</div>
+            <h3>Licensed &amp; Regulated</h3>
+            <p class="muted-text">Every batch is sourced directly from accredited pharmaceutical manufacturers with full cold-chain traceability.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🩺</div>
+            <h3>Free Pharmacist Consultations</h3>
+            <p class="muted-text">Speak directly with a board-certified pharmacist regarding dosage, drug interactions, and side effects.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🚚</div>
+            <h3>Discreet Express Delivery</h3>
+            <p class="muted-text">Tamper-evident, privacy-protected packaging delivered right to your home or office within hours.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shopping Cart Slide-Out Drawer -->
+  <div class="cart-overlay" id="cartOverlay" onclick="if(event.target===this) toggleCartDrawer(false)">
+    <aside class="cart-drawer" aria-label="Shopping Cart">
+      <div class="cart-header">
+        <h3>🛒 Your Pharmacy Cart</h3>
+        <button class="icon-btn" onclick="toggleCartDrawer(false)">✕ Close</button>
+      </div>
+      <div class="cart-items" id="cartItemsContainer"></div>
+      <div class="cart-summary">
+        <div class="summary-row"><span>Subtotal:</span><strong id="cartSubtotal">$0.00</strong></div>
+        <div class="summary-row"><span>Estimated Tax (8%):</span><strong id="cartTax">$0.00</strong></div>
+        <div class="summary-row"><span>Delivery Fee:</span><strong id="cartDelivery">$0.00</strong></div>
+        <div class="summary-row summary-total"><span>Total:</span><span id="cartTotal">$0.00</span></div>
+        <button class="btn btn-primary full-width" onclick="simulateCheckout()">Proceed to Checkout</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Toast Notification & Back to Top -->
+  <div id="toastNotification" class="toast" role="status" aria-live="polite"></div>
+  <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Scroll back to top">↑</button>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>VitaCare Online Pharmacy</h4>
+          <p>Delivering certified pharmaceuticals, wellness essentials, and trusted clinical guidance directly to your doorstep.</p>
+          <div class="social-links" aria-label="Social Media Links">
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="X Twitter">X</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">IN</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="about.html">About VitaCare</a></li>
+            <li><a href="products.html">Pharmacy Catalog</a></li>
+            <li><a href="services.html">Healthcare Services</a></li>
+            <li><a href="contact.html">Contact &amp; Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="services.html">Same-Day Cold-Chain Delivery</a></li>
+            <li><a href="services.html">Prescription Refill Program</a></li>
+            <li><a href="services.html">Medical Device Warranty</a></li>
+            <li><a href="contact.html">Ask a Licensed Pharmacist</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Details</h4>
+          <ul>
+            <li>📍 420 Wellness Avenue, Medical Plaza</li>
+            <li>📞 011769075</li>
+            <li>✉️ VitaCareHealth@gmail.com</li>
+            <li>🕒 Mon–Sun: 24/7 Online Dispatch</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 VitaCare Online Pharmacy. All Rights Reserved. | Pharmacy Board License #VP-88421</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+   
+</body>
+</html>
